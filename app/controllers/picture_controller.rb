@@ -1,0 +1,5 @@
+class PictureController < ApplicationController
+
+
+
+end
