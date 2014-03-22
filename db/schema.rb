@@ -14,10 +14,13 @@
 ActiveRecord::Schema.define(version: 20140320213610) do
 
   create_table "galleries", force: true do |t|
-    t.string  "name"
-    t.string  "place"
-    t.string  "main_picture"
-    t.integer "pictures"
+    t.string   "name"
+    t.string   "place"
+    t.string   "main_picture"
+    t.integer  "pictures"
+    t.date     "shooting_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

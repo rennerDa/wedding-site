@@ -1,0 +1,21 @@
+<div class="padding-container">
+    <h1>Alle Galerien im Überblick</h1>
+
+    <% i = 1 %>
+    <% @galleries.each do |g| %>
+
+        <% if i % 3 == 1 %>
+          <div class="row">
+        <% end %>
+
+        <div class="col-lg-4 col-md-4"><%= g.name %></div>
+
+        <% if i % 3 == 0 %>
+           </div>
+        <% end %>
+
+    <% end %>
+    <% if i % 3 != 0 %>
+        </div>
+    <% end %>
+</div>

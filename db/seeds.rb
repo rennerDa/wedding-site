@@ -10,5 +10,5 @@ if !User.exists?(:email => 'test@test.de')
   User.create!(:email => 'test@test.de', :password => 'testtest', :password_confirmation => 'testtest')
 end
 if !Gallery.exists?(:name => 'Testgalerie')
-  Gallery.create!(:name => 'Testgalerie', :place => '/', :main_picture => 'jenny.jpg', :pictures => 20)
+  Gallery.create!(:name => 'Testgalerie', :place => '/', :main_picture => 'jenny.jpg', :pictures => 20, :shooting_date => Date.today)
 end
