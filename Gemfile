@@ -23,7 +23,7 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # needed by travis
-gem 'thread_safe', :git => 'git://github.com:headius/thread_safe.git', :tag => '0.3.0'
+gem 'thread_safe', :git => 'git://github.com/headius/thread_safe.git', :tag => '0.3.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

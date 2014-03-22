@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/headius/thread_safe.git
+  revision: c22664cb6e967cab2bbbeea408c3dc765815e5a5
+  tag: 0.3.0
+  specs:
+    thread_safe (0.3.0)
+      atomic (>= 1.1.7, < 2)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 436ceba61ad40bbef649c9b87b75684b37bea409
   branch: bootstrap3
@@ -125,8 +133,6 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
-    thread_safe (0.3.0)
-      atomic (>= 1.1.7, < 2)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -157,6 +163,7 @@ DEPENDENCIES
   sdoc
   sqlite3
   therubyracer
+  thread_safe!
   turbolinks
   twitter-bootstrap-rails!
   uglifier (>= 1.3.0)
