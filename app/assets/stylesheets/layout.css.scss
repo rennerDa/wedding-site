@@ -13,6 +13,10 @@ body {
 #content {
   margin-top: 35px;
 
+  h1 {
+    margin-bottom: 20px;
+  }
+
   .padding-container {
     padding: 5px 20px;
   }
@@ -88,4 +92,13 @@ body {
     padding-top: 10px;
   }
 
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.panel-heading span {
+  margin-top: -20px;
+  font-size: 15px;
 }

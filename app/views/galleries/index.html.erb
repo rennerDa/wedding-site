@@ -8,11 +8,23 @@
           <div class="row">
         <% end %>
 
-        <div class="col-lg-4 col-md-4"><%= g.name %></div>
+        <div class="col-lg-4 col-md-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= g.name %></h3>
+              <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+            </div>
+            <div class="panel-body">
+              Panel content
+            </div>
+          </div>
+        </div>
 
         <% if i % 3 == 0 %>
            </div>
         <% end %>
+
+        <% i = i + 1 %>
 
     <% end %>
     <% if i % 3 != 0 %>

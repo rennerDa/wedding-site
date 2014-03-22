@@ -1,6 +1,8 @@
 class Gallery < ActiveRecord::Base
 
-  def to_s
-    return name
-  end
+  has_many :pictures, dependent: :destroy
+  belongs_to :picture
+
+  alias :main_picture= :picture=
+
 end

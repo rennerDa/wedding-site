@@ -11,17 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140320213610) do
+ActiveRecord::Schema.define(version: 20140322061255) do
 
   create_table "galleries", force: true do |t|
     t.string   "name"
     t.string   "place"
-    t.string   "main_picture"
-    t.integer  "pictures"
     t.date     "shooting_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "picture_id"
   end
+
+  add_index "galleries", ["picture_id"], name: "index_galleries_on_picture_id"
+
+  create_table "pictures", force: true do |t|
+    t.string   "filepath"
+    t.string   "filename"
+    t.float    "filesize"
+    t.integer  "gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["gallery_id"], name: "index_pictures_on_gallery_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

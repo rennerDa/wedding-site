@@ -10,5 +10,15 @@ if !User.exists?(:email => 'test@test.de')
   User.create!(:email => 'test@test.de', :password => 'testtest', :password_confirmation => 'testtest')
 end
 if !Gallery.exists?(:name => 'Testgalerie')
-  Gallery.create!(:name => 'Testgalerie', :place => '/', :main_picture => 'jenny.jpg', :pictures => 20, :shooting_date => Date.today)
+  ['Testgalerie', 'Ringschmiede', 'JGA Jenny', 'JGA Daniel'].each do |name|
+    gal = Gallery.create!(:name => name, :place => '/', :shooting_date => Date.today)
+    ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'].each do |pic_name|
+      pic = Picture.create!(:filepath => '/', :filename => pic_name, :filesize => 1.2, :gallery => gal)
+      if pic_name == '01.jpg'
+        gal.picture = pic
+        gal.save!
+      end
+    end
+  end
+
 end

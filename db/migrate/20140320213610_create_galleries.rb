@@ -3,8 +3,6 @@ class CreateGalleries < ActiveRecord::Migration
     create_table :galleries do |t|
       t.string :name
       t.string :place
-      t.string :main_picture
-      t.integer :pictures
       t.date :shooting_date
 
       t.timestamps
