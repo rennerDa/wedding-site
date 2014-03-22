@@ -152,6 +152,7 @@ DEPENDENCIES
   jquery-turbolinks
   less-rails (~> 2.5.0)
   rails (= 4.0.4)
+  rake
   sass-rails (~> 4.0.2)
   sdoc
   sqlite3
