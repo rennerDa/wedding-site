@@ -2,9 +2,10 @@
     <h1>Alle Galerien im Überblick</h1>
 
     <% i = 1 %>
+    <% no_of_columns = 3 %>
     <% @galleries.each do |g| %>
 
-        <% if i % 3 == 1 %>
+        <% if i % no_of_columns == 1 %>
           <div class="row">
         <% end %>
 
@@ -20,14 +21,14 @@
           </div>
         </div>
 
-        <% if i % 3 == 0 %>
+        <% if i % no_of_columns == 0 %>
            </div>
         <% end %>
 
         <% i = i + 1 %>
 
     <% end %>
-    <% if i % 3 != 0 %>
+    <% if i % no_of_columns != 0 %>
         </div>
     <% end %>
 </div>

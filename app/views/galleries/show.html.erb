@@ -1,2 +1,28 @@
-<h1>Gallery#show</h1>
-<p>Find me in app/views/gallery/show.html.erb</p>
+<div class="padding-container">
+  <h1>Alle Galerien im Überblick</h1>
+
+  <% i = 1 %>
+  <% no_of_columns = 4 %>
+  <% @gallery.pictures.each do |picture| %>
+
+      <% if i % no_of_columns == 1 %>
+          <div class="row">
+      <% end %>
+
+      <div class="col-lg-3 col-md-3">
+        <img src="<%= picture_path(picture) %>" alt="<%= picture.filename %>" class="gallery-picture" />
+      </div>
+
+      <% if i % no_of_columns == 0 %>
+          </div>
+      <% end %>
+
+      <% i = i + 1 %>
+
+  <% end %>
+
+  <% if i % no_of_columns != 0 %>
+      </div>
+  <% end %>
+
+</div>
