@@ -11,4 +11,5 @@
  *= require_self
  *= require layout.css.scss
  *= require bootstrap_and_overrides.css.less
+ *= require colorbox.css
  */
