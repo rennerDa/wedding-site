@@ -1,16 +1,18 @@
 <div class="padding-container">
-  <h1>Alle Galerien im Überblick</h1>
+  <h1><% @gallery.name %></h1>
 
   <% i = 1 %>
   <% no_of_columns = 4 %>
   <% @gallery.pictures.each do |picture| %>
 
       <% if i % no_of_columns == 1 %>
-          <div class="row">
+          <div class="row row-margin-bottom">
       <% end %>
 
       <div class="col-lg-3 col-md-3">
-        <img src="<%= picture_path(picture) %>" alt="<%= picture.filename %>" class="gallery-picture" />
+        <%= link_to picture_path(picture), :class => 'colorbox-group' do %>
+            <img src="<%= picture_path(picture) %>" alt="<%= picture.filename %>" class="gallery-picture" />
+        <% end %>
       </div>
 
       <% if i % no_of_columns == 0 %>
