@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/rennerDa/wedding-site.svg?branch=master)](https://travis-ci.org/rennerDa/wedding-site)
-
-wedding-site
+Wedding site of Jennifer and Daniel [![Build Status](https://travis-ci.org/rennerDa/wedding-site.svg?branch=master)](https://travis-ci.org/rennerDa/wedding-site)
 ============
 
 Jennifer and mine wedding site with some information about our wedding and all of the pictures, which only can be seen if you have a login to the page :) .
