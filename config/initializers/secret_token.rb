@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Wedding::Application.config.secret_key_base = 'eb0f2c2a859ce24a8522c64a87fa82d0104b4718e6315658afc709af6ab119ea49c7d1ee317070da42cad7f7ab03a46b38c4563143aab5991852c9c6fd2bec81'
+Wedding::Application.config.secret_key_base = 'this_will_be_changed_in_production'

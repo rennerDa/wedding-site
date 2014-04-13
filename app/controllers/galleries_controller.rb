@@ -1,5 +1,6 @@
 class GalleriesController < ApplicationController
 
+  before_filter :authenticate_user!
   before_action :load_gallery, only: :show
 
   def index
