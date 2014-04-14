@@ -5,6 +5,7 @@ gem 'rails', '4.1.0'
 gem 'devise'
 
 gem 'sqlite3', group: [:development, :test]
+gem 'pg', group: [:production]
 
 gem 'sass-rails', '~> 4.0.2'
 gem "less-rails", "~> 2.5.0"
@@ -34,3 +35,5 @@ group :test do
   # For travis-ci
   gem 'rake'
 end
+
+ruby "2.1.1"
