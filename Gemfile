@@ -36,4 +36,5 @@ group :test do
   gem 'rake'
 end
 
+gem 'unicorn'
 ruby "2.1.1"
