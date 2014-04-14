@@ -6,6 +6,7 @@ gem 'devise'
 
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: [:production]
+gem 'newrelic_rpm', group: [:production]
 
 gem 'sass-rails', '~> 4.0.2'
 gem "less-rails", "~> 2.5.0"
