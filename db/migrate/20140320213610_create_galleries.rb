@@ -4,6 +4,7 @@ class CreateGalleries < ActiveRecord::Migration
       t.string :name
       t.string :place
       t.date :shooting_date
+      t.text :description
 
       t.timestamps
     end

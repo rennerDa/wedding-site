@@ -7,6 +7,10 @@ Wedding::Application.routes.draw do
   end
 
   resources :pictures, only: [:show] do
+    member do
+      get 'thumb' => :thumb
+      get 'box' => :box
+    end
   end
 
 end

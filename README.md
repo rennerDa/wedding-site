@@ -8,10 +8,10 @@ like bachelor parties from both of us, forging our own rings and the wedding its
 Imagemagick commands to resize the pictures
 ------------
 Resize pictures to a maximum height of 900 and a maximum width of 1170:<br>
-```mogrify -resize 1170x900 *.jpg```
+```mogrify -resize 1028x800 *.jpg```
 
 Create thumbnail - 253x253:<br>
-```mogrify -thumbnail 253x253 -gravity center -background white -extent 253x253 -path thumbs *.jpg```
+```mogrify -thumbnail 253x253 -gravity center -background '#406892' -extent 253x253 -path thumbs *.jpg```
 
 Create box-thumbnails (a little bit bigger) - 315x315<br>
-```mogrify -thumbnail 315x315 -gravity center -background white -extent 315x315 -path box *.jpg```
+```mogrify -thumbnail 315x315 -gravity center -background '#406892' -extent 315x315 -path box *.jpg```

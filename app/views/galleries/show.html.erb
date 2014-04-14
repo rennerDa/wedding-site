@@ -11,7 +11,7 @@
 
       <div class="col-lg-3 col-md-3">
         <%= link_to picture_path(picture), :class => 'colorbox-group' do %>
-            <img src="<%= picture_path(picture) %>" alt="<%= picture.filename %>" class="gallery-picture" />
+            <img src="<%= thumb_picture_path(picture) %>" alt="<%= picture.filename %>" class="gallery-picture" />
         <% end %>
       </div>
 

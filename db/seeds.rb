@@ -1,24 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+def createPictures gallery, pictures, main_picture_name
+  pictures.each do |picture|
+    fileSize = File.size(picture).to_f / 1024
+    pic = Picture.create!(:filepath => File.dirname(picture), :filename => picture.split('/').last, :filesize => fileSize, :gallery => gallery)
+    if picture.split('/').last == main_picture_name
+      gallery.picture = pic
+      gallery.save!
+    end
+  end
+end
+
+# Create users
 if !User.exists?(:email => 'test@test.de')
   puts 'Create test user'
   User.create!(:email => 'test@test.de', :password => 'testtest', :password_confirmation => 'testtest')
 end
-if !Gallery.exists?(:name => 'Testgalerie')
-  ['Testgalerie', 'Ringschmiede', 'JGA Jenny', 'JGA Daniel'].each do |name|
-    gal = Gallery.create!(:name => name, :place => '/', :shooting_date => Date.today)
-    ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'].each do |pic_name|
-      pic = Picture.create!(:filepath => '/', :filename => pic_name, :filesize => 1.2, :gallery => gal)
-      if pic_name == '01.jpg'
-        gal.picture = pic
-        gal.save!
-      end
-    end
-  end
+
+# Create every single gallery - its not necessary to create a backend, seeding is enough for our purposes
+if !Gallery.exists?(:name => 'Ringe schmieden')
+
+  gal = Gallery.create!(:name => 'Ringe schmieden', :place => '/', :shooting_date => Date.new(2014, 4, 12), :description => 'Testbezeichnung super Testbezeichnung')
+  pictures = Dir.glob(Rails.root.join('02_Pictures', 'galleries', 'ringe_schmieden', '*.jpg'))
+  createPictures gal, pictures, 'p2240233.jpg'
 
 end

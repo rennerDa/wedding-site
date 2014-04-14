@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140322061255) do
     t.string   "name"
     t.string   "place"
     t.date     "shooting_date"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "picture_id"
